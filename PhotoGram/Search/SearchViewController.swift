@@ -11,6 +11,9 @@ class SearchViewController: BaseViewController {
     
     let mainView = SearchView()
     let imageList = ["star", "person", "star.fill", "heart", "heart.fill"]
+    
+    var delegate: PassImageDelegate?
+    
     override func loadView() {
         self.view = mainView
     }
@@ -21,10 +24,10 @@ class SearchViewController: BaseViewController {
         // addObserver보다 post가 먼저 신호를 보내면 실행될 수 없다...
         NotificationCenter.default.addObserver(self, selector: #selector(recommendKeywordNotificationObserver), name: NSNotification.Name("ReccomendKeyword"), object: nil)
     }
-    
+
     @objc func recommendKeywordNotificationObserver(notification: NSNotification) {
         let word = notification.userInfo?["word"]
-        print(word)
+        print(word) // 출력 안됨
     }
     
     override func configureView() {
@@ -51,10 +54,11 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(imageList[indexPath.item])
         
-        // 발신
-        NotificationCenter.default.post(name: NSNotification.Name("SelectImage"), object: nil, userInfo: ["name": imageList[indexPath.item], "sample": "악어"])
+        // 값 전달 - Notification (발신)
+        //NotificationCenter.default.post(name: NSNotification.Name("SelectImage"), object: nil, userInfo: ["name": imageList[indexPath.item], "sample": "악어"])
+        // 값 전달 - Delegate
+        delegate?.receiveImage(image: UIImage(systemName: imageList[indexPath.item])!)
         
         dismiss(animated: true)
     }

@@ -27,12 +27,12 @@ class SearchView: BaseView {
         return view
     }()
     
-    func collectionViewLayout() -> UICollectionViewFlowLayout {
+    private func collectionViewLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 8
         layout.minimumInteritemSpacing = 8
         let size = UIScreen.main.bounds.width - 40 //self.frame.width - 40
-        print(self.frame.width)
+        //print(self.frame.width)
         layout.itemSize = CGSize(width: size/4, height: size/4)
         return layout
     }
