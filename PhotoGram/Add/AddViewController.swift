@@ -34,10 +34,7 @@ class AddViewController: BaseViewController {
         mainView.titleButton.addTarget(self, action: #selector(titleButtonClicked), for: .touchUpInside)
         mainView.textButton.addTarget(self, action: #selector(textButtonClicked), for: .touchUpInside)
         
-//        ClassOpenExample.publicExample()
-//        ClassPublicExample.publicExample()
-        //sesacShowActivityViewController(image: UIImage(systemName: "star")!, url: "hi", text: "안녕")
-        
+        APIService.shared.callRequest()
     }
     
     @objc func textButtonClicked() {

@@ -30,6 +30,8 @@
 		487D640D2A9C337C0078FFEE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487D640C2A9C337C0078FFEE /* SearchView.swift */; };
 		487D640F2A9C36670078FFEE /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487D640E2A9C36670078FFEE /* BaseCollectionViewCell.swift */; };
 		487D64112A9C37EF0078FFEE /* SearchCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487D64102A9C37EF0078FFEE /* SearchCollectionCell.swift */; };
+		48B648B32A9EC73D00CF38FB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B648B22A9EC73D00CF38FB /* APIService.swift */; };
+		48B648B52A9EEBDB00CF38FB /* URLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B648B42A9EEBDB00CF38FB /* URLSessionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		487D640C2A9C337C0078FFEE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		487D640E2A9C36670078FFEE /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		487D64102A9C37EF0078FFEE /* SearchCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionCell.swift; sourceTree = "<group>"; };
+		48B648B22A9EC73D00CF38FB /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		48B648B42A9EEBDB00CF38FB /* URLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 		487D63E92A9C1D870078FFEE /* PhotoGram */ = {
 			isa = PBXGroup;
 			children = (
+				48B648B12A9EC72700CF38FB /* Network */,
 				485F5A832A9D7BC300113291 /* Extension */,
 				487D64092A9C2FC30078FFEE /* Add */,
 				487D64042A9C272F0078FFEE /* Search */,
@@ -194,6 +199,15 @@
 				485F5AC52A9DBA8600113291 /* TextViewController.swift */,
 			);
 			path = Add;
+			sourceTree = "<group>";
+		};
+		48B648B12A9EC72700CF38FB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				48B648B22A9EC73D00CF38FB /* APIService.swift */,
+				48B648B42A9EEBDB00CF38FB /* URLSessionViewController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				485F5A852A9D7BDC00113291 /* Notification+Extension.swift in Sources */,
+				48B648B32A9EC73D00CF38FB /* APIService.swift in Sources */,
 				485F5AC92A9DC75700113291 /* WebViewController.swift in Sources */,
 				487D640B2A9C2FD40078FFEE /* AddView.swift in Sources */,
 				487D64062A9C27510078FFEE /* SearchViewController.swift in Sources */,
@@ -310,6 +325,7 @@
 				487D64082A9C2EBB0078FFEE /* BaseView.swift in Sources */,
 				485F5A8B2A9D8E8500113291 /* DateFormatter+Extension.swift in Sources */,
 				487D63EB2A9C1D870078FFEE /* AppDelegate.swift in Sources */,
+				48B648B52A9EEBDB00CF38FB /* URLSessionViewController.swift in Sources */,
 				487D63ED2A9C1D870078FFEE /* SceneDelegate.swift in Sources */,
 				485F5AC62A9DBA8600113291 /* TextViewController.swift in Sources */,
 				487D64112A9C37EF0078FFEE /* SearchCollectionCell.swift in Sources */,

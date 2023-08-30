@@ -23,6 +23,9 @@ class SearchViewController: BaseViewController {
         
         // addObserver보다 post가 먼저 신호를 보내면 실행될 수 없다...
         NotificationCenter.default.addObserver(self, selector: #selector(recommendKeywordNotificationObserver), name: NSNotification.Name("ReccomendKeyword"), object: nil)
+        
+        mainView.searchBar.becomeFirstResponder()
+        mainView.searchBar.delegate = self
     }
 
     @objc func recommendKeywordNotificationObserver(notification: NSNotification) {
@@ -35,6 +38,12 @@ class SearchViewController: BaseViewController {
         
         mainView.collectionView.delegate = self
         mainView.collectionView.dataSource = self
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        mainView.searchBar.resignFirstResponder()
     }
 }
 
