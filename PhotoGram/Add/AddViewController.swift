@@ -37,6 +37,10 @@ class AddViewController: BaseViewController {
         APIService.shared.callRequest()
     }
     
+    deinit {
+        print(self, "deinit됨") // 현재 클래스 네임
+    }
+    
     @objc func textButtonClicked() {
         let vc = TextViewController()
         vc.completionHandler = { jack in
@@ -64,9 +68,12 @@ class AddViewController: BaseViewController {
     
     @objc func dateButtonClicked() {
         
-        let vc = DateViewController()
-        // 5.
-        vc.delegate = self
+//        let vc = DateViewController()
+//        // 5.
+//        vc.delegate = self
+//        navigationController?.pushViewController(vc, animated: true)
+        
+        let vc = HomeViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     

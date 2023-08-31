@@ -18,6 +18,10 @@ class DateViewController: BaseViewController {
         self.view = mainView
     }
     
+    deinit {
+        print(self, "deinit됨 ")
+    }
+    
     // 3. 메서드를 실행시켜라
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)

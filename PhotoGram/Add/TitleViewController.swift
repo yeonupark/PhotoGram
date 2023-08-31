@@ -18,6 +18,10 @@ class TitleViewController: BaseViewController {
         self.view = mainView
     }
     
+    deinit {
+        print(self, "deinit됨 ")
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
