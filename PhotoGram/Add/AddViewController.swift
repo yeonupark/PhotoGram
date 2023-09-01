@@ -34,7 +34,7 @@ class AddViewController: BaseViewController {
         mainView.titleButton.addTarget(self, action: #selector(titleButtonClicked), for: .touchUpInside)
         mainView.textButton.addTarget(self, action: #selector(textButtonClicked), for: .touchUpInside)
         
-        APIService.shared.callRequest()
+        //APIService.shared.callRequest(query: "sky")
     }
     
     deinit {
@@ -98,18 +98,46 @@ class AddViewController: BaseViewController {
         }
     }
     
-    @objc func searchButtonClicked() {
+//    @objc func searchButtonClicked() {
+//
+//        let word = ["Apple", "Banana", "Durian", "Mango", "Pineapple"]
+//
+//        NotificationCenter.default.post(name: NSNotification.Name("ReccomendKeyword"), object: nil, userInfo: ["word": word.randomElement()!])
+//        navigationController?.pushViewController(SearchViewController(), animated: true)
+//
+//    }
+    
+    @objc func showSearchActionSheet() {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let web = UIAlertAction(title: "웹에서 검색하기", style: .default) { _ in
+            //self.webSearch()
+            self.navigationController?.pushViewController(WebSearchViewController(), animated: true)
+        }
+        let gallery = UIAlertAction(title: "갤러리에서 가져오기", style: .default) { _ in
+            self.gallerySearch()
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel) { _ in
+            self.dismiss(animated: true)
+        }
+        alert.addAction(web)
+        alert.addAction(gallery)
+        alert.addAction(cancel)
         
-        let word = ["Apple", "Banana", "Durian", "Mango", "Pineapple"]
+        present(alert, animated: true)
+    }
+    
+    func webSearch() {
         
-        NotificationCenter.default.post(name: NSNotification.Name("ReccomendKeyword"), object: nil, userInfo: ["word": word.randomElement()!])
-        navigationController?.pushViewController(SearchViewController(), animated: true) //
+    }
+    
+    func gallerySearch() {
+        
     }
     
     override func configureView() { // addSubView
         super.configureView()
         print("Add ConfigureView")
-        mainView.searchButton.addTarget(self, action: #selector(searchButtonClicked), for: .touchUpInside) //
+        mainView.searchButton.addTarget(self, action: #selector(showSearchActionSheet), for: .touchUpInside) //
     }
 
     override func setConstraints() { // 제약 조건

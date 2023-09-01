@@ -17,6 +17,13 @@
 		485F5AC42A9DB55600113291 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485F5AC32A9DB55600113291 /* TitleView.swift */; };
 		485F5AC62A9DBA8600113291 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485F5AC52A9DBA8600113291 /* TextViewController.swift */; };
 		485F5AC92A9DC75700113291 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485F5AC82A9DC75700113291 /* WebViewController.swift */; };
+		486AB50C2AA0D2CD003960C6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 486AB50B2AA0D2CD003960C6 /* .gitignore */; };
+		486AB50E2AA0D2DF003960C6 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486AB50D2AA0D2DF003960C6 /* APIKeys.swift */; };
+		486AB5122AA0D7FF003960C6 /* WebSearchViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486AB5112AA0D7FF003960C6 /* WebSearchViewController2.swift */; };
+		486AB5152AA0E099003960C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 486AB5142AA0E099003960C6 /* Alamofire */; };
+		486AB5172AA0E157003960C6 /* WebSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486AB5162AA0E157003960C6 /* WebSearchViewController.swift */; };
+		486AB5192AA0E22F003960C6 /* UnsplashImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486AB5182AA0E22F003960C6 /* UnsplashImage.swift */; };
+		486AB51B2AA0E259003960C6 /* UnsplashAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486AB51A2AA0E259003960C6 /* UnsplashAPIManager.swift */; };
 		487D63EB2A9C1D870078FFEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487D63EA2A9C1D870078FFEE /* AppDelegate.swift */; };
 		487D63ED2A9C1D870078FFEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487D63EC2A9C1D870078FFEE /* SceneDelegate.swift */; };
 		487D63EF2A9C1D870078FFEE /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487D63EE2A9C1D870078FFEE /* AddViewController.swift */; };
@@ -77,6 +84,12 @@
 		485F5AC32A9DB55600113291 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		485F5AC52A9DBA8600113291 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		485F5AC82A9DC75700113291 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		486AB50B2AA0D2CD003960C6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		486AB50D2AA0D2DF003960C6 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		486AB5112AA0D7FF003960C6 /* WebSearchViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchViewController2.swift; sourceTree = "<group>"; };
+		486AB5162AA0E157003960C6 /* WebSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchViewController.swift; sourceTree = "<group>"; };
+		486AB5182AA0E22F003960C6 /* UnsplashImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashImage.swift; sourceTree = "<group>"; };
+		486AB51A2AA0E259003960C6 /* UnsplashAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPIManager.swift; sourceTree = "<group>"; };
 		487D63E72A9C1D870078FFEE /* PhotoGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487D63EA2A9C1D870078FFEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		487D63EC2A9C1D870078FFEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				486AB5152AA0E099003960C6 /* Alamofire in Frameworks */,
 				487D64002A9C1E270078FFEE /* SnapKit in Frameworks */,
 				485F5ABE2A9D9BBD00113291 /* SeSACFramework.framework in Frameworks */,
 			);
@@ -188,6 +202,10 @@
 				487D64052A9C27510078FFEE /* SearchViewController.swift */,
 				487D640C2A9C337C0078FFEE /* SearchView.swift */,
 				487D64102A9C37EF0078FFEE /* SearchCollectionCell.swift */,
+				486AB5112AA0D7FF003960C6 /* WebSearchViewController2.swift */,
+				486AB5162AA0E157003960C6 /* WebSearchViewController.swift */,
+				486AB5182AA0E22F003960C6 /* UnsplashImage.swift */,
+				486AB51A2AA0E259003960C6 /* UnsplashAPIManager.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -211,6 +229,8 @@
 			children = (
 				48B648B22A9EC73D00CF38FB /* APIService.swift */,
 				48B648B42A9EEBDB00CF38FB /* URLSessionViewController.swift */,
+				486AB50B2AA0D2CD003960C6 /* .gitignore */,
+				486AB50D2AA0D2DF003960C6 /* APIKeys.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -243,6 +263,7 @@
 			name = PhotoGram;
 			packageProductDependencies = (
 				487D63FF2A9C1E270078FFEE /* SnapKit */,
+				486AB5142AA0E099003960C6 /* Alamofire */,
 			);
 			productName = PhotoGram;
 			productReference = 487D63E72A9C1D870078FFEE /* PhotoGram.app */;
@@ -274,6 +295,7 @@
 			mainGroup = 487D63DE2A9C1D860078FFEE;
 			packageReferences = (
 				487D63FE2A9C1E260078FFEE /* XCRemoteSwiftPackageReference "SnapKit" */,
+				486AB5132AA0E099003960C6 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 487D63E82A9C1D870078FFEE /* Products */;
 			projectDirPath = "";
@@ -313,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				487D63F72A9C1D8A0078FFEE /* LaunchScreen.storyboard in Resources */,
+				486AB50C2AA0D2CD003960C6 /* .gitignore in Resources */,
 				487D63F42A9C1D8A0078FFEE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,15 +352,20 @@
 				485F5AC92A9DC75700113291 /* WebViewController.swift in Sources */,
 				487D640B2A9C2FD40078FFEE /* AddView.swift in Sources */,
 				487D64062A9C27510078FFEE /* SearchViewController.swift in Sources */,
+				486AB50E2AA0D2DF003960C6 /* APIKeys.swift in Sources */,
 				48B648BA2AA01A9500CF38FB /* HomeView.swift in Sources */,
 				48B648B82AA01A7400CF38FB /* HomeViewController.swift in Sources */,
+				486AB51B2AA0E259003960C6 /* UnsplashAPIManager.swift in Sources */,
 				487D640F2A9C36670078FFEE /* BaseCollectionViewCell.swift in Sources */,
+				486AB5192AA0E22F003960C6 /* UnsplashImage.swift in Sources */,
 				487D63EF2A9C1D870078FFEE /* AddViewController.swift in Sources */,
 				485F5A892A9D7DBC00113291 /* DateViewController.swift in Sources */,
 				487D64032A9C24160078FFEE /* BaseViewController.swift in Sources */,
 				485F5AC42A9DB55600113291 /* TitleView.swift in Sources */,
 				485F5A872A9D7C7F00113291 /* DateView.swift in Sources */,
 				487D640D2A9C337C0078FFEE /* SearchView.swift in Sources */,
+				486AB5172AA0E157003960C6 /* WebSearchViewController.swift in Sources */,
+				486AB5122AA0D7FF003960C6 /* WebSearchViewController2.swift in Sources */,
 				487D64082A9C2EBB0078FFEE /* BaseView.swift in Sources */,
 				485F5A8B2A9D8E8500113291 /* DateFormatter+Extension.swift in Sources */,
 				487D63EB2A9C1D870078FFEE /* AppDelegate.swift in Sources */,
@@ -555,6 +583,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		486AB5132AA0E099003960C6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		487D63FE2A9C1E260078FFEE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -566,6 +602,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		486AB5142AA0E099003960C6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 486AB5132AA0E099003960C6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		487D63FF2A9C1E270078FFEE /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 487D63FE2A9C1E260078FFEE /* XCRemoteSwiftPackageReference "SnapKit" */;

@@ -27,6 +27,12 @@ class SearchView: BaseView {
         return view
     }()
     
+    let searchButton = {
+        let view = UIButton()
+        view.backgroundColor = .systemBlue
+        return view
+    }()
+    
     private func collectionViewLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 8
@@ -40,11 +46,17 @@ class SearchView: BaseView {
     override func configureView() {
         addSubview(searchBar)
         addSubview(collectionView)
+        addSubview(searchButton)
     }
     
     override func setConstraints() {
         searchBar.snp.makeConstraints { make in
-            make.top.horizontalEdges.equalToSuperview()
+            make.top.leading.equalTo(self.safeAreaLayoutGuide)
+            make.trailing.equalTo(self.safeAreaLayoutGuide).inset(40)
+        }
+        searchButton.snp.makeConstraints { make in
+            make.top.bottom.equalTo(searchBar)
+            make.trailing.equalTo(self.safeAreaLayoutGuide)
         }
         collectionView.snp.makeConstraints { make in
             make.horizontalEdges.bottom.equalToSuperview()
